@@ -17,6 +17,11 @@ int main() {
     scanf ("%i", &k);
     
     if (k==1) {
+    binary_tree<int> binary_tree;
+    for (int i = 0; i < 5; i++)
+    binary_tree.add_(rand() % 100);
+    cout << "tree created" << endl;
+    binary_tree.print_tree_(); 
             
      cout << "Working with: (1)insert element, (2)find a specific element, (3)delete element, "
             "(4)see tree, (5)make forward pass " << endl;
