@@ -1,10 +1,7 @@
 #pragma once
 #include <iostream>
-#include "BinaryTree.h"
-#pragma once
-#include <iostream>
-#include "BinaryTree.h"
-#include "Heap.h"
+#include "binary_tree.h"
+#include "heap.h"
 using namespace std;
 
 
