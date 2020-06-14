@@ -1,13 +1,13 @@
 #pragma once
 #include <iostream>
-#include "BinaryTree.h"
-#include "Tests.h"
+#include "binary_tree.h"
+#include "test.h"
 
 using namespace std;
 
 
 int main() {
-
+   int k = 0;
     cout << "for tests input 1" << endl;
     scanf ("%i", &k);
     if (k == 1)
@@ -15,14 +15,14 @@ int main() {
 
     cout << "Working with: (1)binary tree, (2)heap " << endl;
     scanf ("%i", &k);
-    
+
     if (k==1) {
     binary_tree<int> binary_tree;
     for (int i = 0; i < 5; i++)
     binary_tree.add_(rand() % 100);
     cout << "tree created" << endl;
-    binary_tree.print_tree_(); 
-            
+    binary_tree.print_tree_();
+
      cout << "Working with: (1)insert element, (2)find a specific element, (3)delete element, "
             "(4)see tree, (5)make forward pass " << endl;
      scanf ("%i", &k);
@@ -51,23 +51,24 @@ int main() {
                 cout << endl;
             }
 
-            if (answer == 5) {
+            if (k == 5) {
                 cout << "Forward pass: ";
                 cout << binary_tree.forward_pass_() << endl;
             }
             if ((k != 1) || (k != 2) || (k != 3) || (k != 4)|| (k != 5)) {
                 cout<<"Incorrect answer";
             }
-            
+
     }
-        binary_tree.free_tree_();
-        
+        //binary_tree.free_tree_();
+
     else if (k == 2) {
+        double input_;
         heap<int> heap;
         for (int i = 0; i < 5; i++)
         heap.add(rand() % 1000);
         cout << "created heap" << endl;
-        heap.print_heap(); 
+        heap.print_heap();
         cout << "What do you want to do with heap: (1)insert element, (2)delete element, (3)find a specific element, "
             "(4)see heap" << endl;
         scanf("%i", &k);
@@ -80,7 +81,7 @@ int main() {
             if (k == 2) {
                 cout << "Which element you want to delete: ";
                 cin >> input_;
-                heap.delete_element(input_);
+                heap.delete_el(input_);
             }
 
             if (k == 3) {
@@ -96,9 +97,9 @@ int main() {
             if ((k != 1) || (k != 2) || (k != 3) || (k != 4)) {
                 cout<<"Incorrect answer";
             }
-        
-    }
-    else 
+
+
+    else
         cout<<"Incorrect answer";
     }
     return 0;
